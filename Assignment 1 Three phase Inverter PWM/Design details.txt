@@ -1,0 +1,17 @@
+- Homework 1:
+Implement a 3-phase inverter in Simulation (Plexim preferred, otherwise plain simulink) to produce 3-phase sinusoidal output.
+Specs:
+400V DC link (200+200)
+10kHz switching frequency
+Use ideal MOSFETS/IGBT models
+Modulation index should be variable through a user input (knob)
+Model should be parameterised, i.e. most parameters should be in one parameter file somewhere.
+Connect an RL load on each phase, from the inverter pole to the DC midpoinf.
+Take the R/L value to be such that τ>10*Tsw and peak current is about 2.5A
+Model should be in Fixed-time step; step time of ~1us
+
+LC circuit Design
+
+L/R = time constant = 10*T of sawtooth (Carrier)
+R = peak voltage/Current = 200/2.5 = 80
+L = 10*(1/10*10e3)*80 = 0.08H

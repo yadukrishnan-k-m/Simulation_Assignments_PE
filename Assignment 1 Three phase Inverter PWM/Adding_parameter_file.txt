@@ -1,0 +1,8 @@
+1. Create parameter.m file in the same directory (preffered)
+2. Include all the variables with semicolon as seperation (eg: Vdc = 200;)
+3. Save it
+4. Goto simulink - Modeling - Model settings - Model properties - Callbacks - PreLoadFcn
+5. Write the command to include the file to simulink
+   run('path\parameter.m')
+Note: Better to include the full file path
+6. Reload the simulink, parameters are available across the workspace
